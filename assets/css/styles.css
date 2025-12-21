@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+/* === UNIVERSAL === */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lexend', sans-serif;
+}
+
+body{
+    background-color: hsl(0, 0%, 98%);
+}
+
+/* === HEADER === */
+.header{
+    background-color: hsl(198, 100%, 62%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid hsla(0, 0%, 0%, 0.2);
+    box-shadow: 0 1px 2px hsla(0, 0%, 0%, 0.2);
+}
+
+.logo-text{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.nav{
+    display: flex;
+    gap: 1rem;
+}
+
+.nav a{
+    text-decoration: none;
+    color: black;
+}
+
+/* === MAIN === */
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3em;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1em;
+}
+
+.logo-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-image img{
+    width: 10em;
+    height: 10em;
+    border-radius: 50%;
+    border: 1px solid hsla(0, 0%, 0%, 0.2);
+    box-shadow: 0 0 5px hsla(0, 0%, 0%, 0.2);
+    object-fit: cover;
+    margin: 0 auto;
+}
+
+.header-description{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1em 0;
+    gap: 0.5em;
+    background-color: hsla(214, 100%, 77%, 0.5);
+    padding: 0.5em 1em;
+    border-radius: 10px;
+    box-shadow: 0 0 5px hsla(0, 0%, 0%, 0.2);
+    transform: scale(1);
+    transition: transform 0.4s ease-out,
+                background-color 0.4s ease-out;
+}
+
+.header-description:hover{
+    background-color: hsla(198, 100%, 62%, 0.5);
+    transform: scale(1.05);
+    transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1),
+                background-color 0.6s ease;
+}
+
+#header-description{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+#subheader-description{
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.main-description{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1em 0;
+    background-color: hsla(214, 100%, 77%, 0.5);
+    padding: 0.5em 1em;
+    border-radius: 10px;
+    box-shadow: 0 0 5px hsla(0, 0%, 0%, 0.2);
+    margin: 0.5em 1em;
+    transform: scale(1);
+    transition: transform 0.4s ease-out,
+                background-color 0.4s ease-out;
+}
+
+.main-description:hover{
+    background-color: hsla(198, 100%, 62%, 0.5);
+    transform: scale(1.05);
+    transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1),
+                background-color 0.6s ease;
+}
+
+/* === ANIMATION === */
+
+
+/* === KEYFRAMES === */
