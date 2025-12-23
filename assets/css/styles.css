@@ -9,12 +9,14 @@
 }
 
 body{
-    background-color: hsl(0, 0%, 98%);
+    background-color: hsl(0, 0%, 5%);
+    overflow-x: hidden;
+    position: relative;
 }
 
 /* === HEADER === */
 .header{
-    background-color: hsl(198, 100%, 62%);
+    background-color: hsla(198, 100%, 62%, 0.8);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -26,6 +28,7 @@ body{
 .logo-text{
     font-size: 1.5rem;
     font-weight: 500;
+    cursor: pointer;
 }
 
 .nav{
@@ -58,6 +61,13 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    transform: scale(1);
+    transition: transform 0.4s ease-out;
+}
+
+.logo-image:hover{
+    transform: scale(1.05);
+    transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .logo-image img{
@@ -65,7 +75,7 @@ body{
     height: 10em;
     border-radius: 50%;
     border: 1px solid hsla(0, 0%, 0%, 0.2);
-    box-shadow: 0 0 5px hsla(0, 0%, 0%, 0.2);
+    box-shadow: 0 0 10px hsla(0, 0%, 100%, 0.6);
     object-fit: cover;
     margin: 0 auto;
 }
@@ -77,30 +87,34 @@ body{
     align-items: center;
     padding: 1em 0;
     gap: 0.5em;
-    background-color: hsla(214, 100%, 77%, 0.5);
+    background-color: hsla(200, 100%, 84%, 0.8);
     padding: 0.5em 1em;
     border-radius: 10px;
-    box-shadow: 0 0 5px hsla(0, 0%, 0%, 0.2);
+    box-shadow: 0 0 10px hsla(0, 0%, 100%, 0.4);
     transform: scale(1);
     transition: transform 0.4s ease-out,
                 background-color 0.4s ease-out;
 }
 
 .header-description:hover{
-    background-color: hsla(198, 100%, 62%, 0.5);
+    background-color: hsla(200, 100%, 69%, 0.8);
+    box-shadow: 0 0 15px hsla(0, 0%, 100%, 0.6);
     transform: scale(1.05);
     transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1),
-                background-color 0.6s ease;
+                background-color 0.6s ease,
+                box-shadow 0.6s ease;
 }
 
 #header-description{
     font-size: 1.5rem;
     font-weight: 500;
+    color: hsl(0, 0%, 0%);
 }
 
 #subheader-description{
     font-size: 1rem;
     font-weight: 400;
+    color: hsl(0, 0%, 0%)
 }
 
 .main-description{
@@ -109,24 +123,108 @@ body{
     justify-content: center;
     align-items: center;
     padding: 1em 0;
-    background-color: hsla(214, 100%, 77%, 0.5);
+    background-color: hsla(200, 100%, 86%, 0.8);
+    color: hsl(0, 0%, 0%);
     padding: 0.5em 1em;
     border-radius: 10px;
-    box-shadow: 0 0 5px hsla(0, 0%, 0%, 0.2);
+    box-shadow: 0 0 10px hsla(0, 0%, 100%, 0.4);
     margin: 0.5em 1em;
+    max-width: 30em;
+    line-height: 2rem;
     transform: scale(1);
     transition: transform 0.4s ease-out,
                 background-color 0.4s ease-out;
 }
 
 .main-description:hover{
-    background-color: hsla(198, 100%, 62%, 0.5);
+    background-color: hsla(200, 100%, 69%, 0.9);
+    box-shadow: 0 0 15px hsla(0, 0%, 100%, 0.6);
     transform: scale(1.05);
     transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1),
                 background-color 0.6s ease;
 }
 
-/* === ANIMATION === */
+/* === BACKGROUND === */
+.stars-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+    overflow: hidden;
+}
 
+.star {
+    position: absolute;
+    background-color: hsla(0, 0%, 100%, 0.3);
+    border-radius: 50%;
+    animation: moveUp linear infinite;
+    opacity: 0.7;
+}
 
-/* === KEYFRAMES === */
+/* Tambahkan lebih banyak bintang sesuai kebutuhan */
+.star:nth-child(n+11) {
+    width: 1px; 
+    height: 1px;
+    left: random(100); /* Untuk implementasi nyata, butuh JS atau buat banyak kelas */
+}
+
+@keyframes moveUp {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-110vh) scale(1.2);
+        opacity: 0;
+    }
+}
+
+/* Efek twinkle (berkedip) opsional */
+@keyframes twinkle {
+    0%, 100% {
+        opacity: 0.8;
+    }
+    50% {
+        opacity: 0.3;
+    }
+}
+
+.star:nth-child(3n) {
+    animation: moveUp linear infinite, twinkle 3s infinite;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+    .header {
+        padding: 0.75rem 1rem;
+        flex-wrap: wrap;
+    }
+
+    .logo-text {
+        font-size: 1.3rem;
+    }
+
+    .nav {
+        gap: 0.8rem;
+    }
+
+    .nav a {
+        font-size: 0.9rem;
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 354px){
+    .header{
+        gap: 0.5rem;
+    }
+}
