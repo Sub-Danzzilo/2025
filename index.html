@@ -3,40 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>My Portfolio</title>
     <link rel="stylesheet" href="assets\css\styles.css">
 </head>
 <body>
-
+    <!-- BACKGROUND -->
+    <div class="stars-bg" id="stars"></div>
+    
     <!-- HEADER -->
     <header class="header">
-        <div class="logo-text">Danzzilo</div>
+        <div class="logo-text" onclick="window.location.reload()">Danzzilo</div>
         <nav class="nav">
-            <a href="#">Home</a>
-            <a href="#">About</a>
+            <a href="#home-page">Home</a>
+            <a href="#about-page">About</a>
+            <a href="#">Projects</a>
             <a href="#">Contact</a>
         </nav>
     </header>
     
     <!-- MAIN -->
     <main class="main">
-        <div class="logo-container">
-            <div class="logo-image">
-                <img src="assets\images\logo.jpg" alt="logo">
+        <section id="home-page">
+            <div class="logo-container">
+                <div class="logo-image">
+                    <img src="assets\images\logo.jpg" alt="logo">
+                </div>
+                <div class="header-description">
+                    <h1 id="header-description">Hi, I'm Danzzilo!</h1>
+                    <h2 id="subheader-description">
+                        Web Developer
+                    </h2>
+                </div>
+                <div class="main-description">
+                    <p>
+                        Hi! i'm Muhammad Riski. You can call me Riski. 
+                        Currently, I'm a student at <strong>Universitas Negeri Surabaya</strong> majoring in Informatics Management. 
+                        I'm beginner in web development. 
+                        I'm currently learning HTML, CSS, JavaScript, and basic PHP. 
+
+                    </p>
+                </div>
             </div>
-            <div class="header-description">
-                <h1 id="header-description">Hi, I'm Danzzilo!</h1>
-                <h2 id="subheader-description">
-                    Web Developer
-                </h2>
-            </div>
-            <div class="main-description">
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
-                    Exercitationem corporis vitae veritatis eveniet voluptate sequi rem odit sunt earum? Expedita.
-                </p>
-            </div>
-        </div>
+        </section>
+        
+        <section id="about-page">
+
+        </section>
     </main>
     
     <!-- FOOTER -->
