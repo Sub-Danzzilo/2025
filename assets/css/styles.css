@@ -24,6 +24,10 @@ hr {
     height: 2px;
 }
 
+.indent-paragraph{
+    text-indent: 3rem;
+}
+
 /* === HEADER === */
 .header{
     background-color: hsla(198, 100%, 62%, 0.8);
