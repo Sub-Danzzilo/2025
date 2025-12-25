@@ -66,7 +66,7 @@ hr {
 
 /* <= Home => */
 .logo-container {
-    gap: 1em;
+    margin: 2em auto;
 }
 
 .logo-image{
@@ -87,10 +87,11 @@ hr {
     box-shadow: 0 0 10px hsla(0, 0%, 100%, 0.6);
     object-fit: cover;
     margin: 0 auto;
+    cursor: pointer;
 }
 
 /* <= About => */
-.header-description{
+.main-header{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -108,7 +109,7 @@ hr {
                 background-color 0.4s ease-out;
 }
 
-.header-description:hover{
+.main-header:hover{
     background-color: hsla(200, 100%, 69%, 0.8);
     box-shadow: 0 0 15px hsla(0, 0%, 100%, 0.6);
     transform: scale(1.05);
@@ -117,9 +118,9 @@ hr {
                 box-shadow 0.6s ease;
 }
 
-#header-description{
+.main-header-text{
     font-size: 1.5rem;
-    font-weight: 500;
+    font-weight: bold;
     color: hsl(0, 0%, 0%);
 }
 
@@ -146,6 +147,65 @@ hr {
 .main-description:hover{
     background-color: hsla(200, 100%, 69%, 0.9);
     box-shadow: 0 0 15px hsla(0, 0%, 100%, 0.6);
+    transform: scale(1.05);
+    transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1),
+                background-color 0.6s ease;
+}
+
+.card-projects{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 2em;
+    padding: 1em 2em;
+    background-color: hsla(200, 100%, 86%, 0.8);
+    color: hsl(0, 0%, 0%);
+    border-radius: 10px;
+    box-shadow: 0 0 10px hsla(0, 0%, 100%, 0.4);
+    margin: 2em auto;
+    width: 80%;
+    max-width: 60em;
+    line-height: 2rem;
+    transform: scale(1);
+    transition: transform 0.4s ease-out,
+                background-color 0.4s ease-out;
+}
+
+.card-projects:hover{
+    background-color: hsla(200, 100%, 69%, 0.9);
+    box-shadow: 0 0 15px hsla(0, 0%, 100%, 0.6);
+    transform: scale(1.01);
+    transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1),
+                background-color 0.6s ease;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 20em;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1em;
+    padding: 2em 2em;
+    background-color: hsla(221, 100%, 75%, 0.8);
+    color: hsl(0, 0%, 0%);
+    border-radius: 10px;
+    box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.4);
+    margin: 1em auto;
+    width: 80%;
+    min-width: 20em;
+    /* max-width: 40em; */
+    line-height: 2rem;
+    transform: scale(1);
+    transition: transform 0.4s ease-out,
+                background-color 0.4s ease-out;
+}
+
+.card:hover{
+    background-color: hsla(221, 100%, 69%, 0.9);
+    box-shadow: 0 0 15px hsla(0, 0%, 0%, 0.6);
     transform: scale(1.05);
     transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1),
                 background-color 0.6s ease;
