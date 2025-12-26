@@ -31,3 +31,59 @@ for (let i = 1; i <= starCount; i++) {
     
     starsContainer.appendChild(star);
 }
+
+// Smooth scroll dengan easing function
+document.addEventListener('DOMContentLoaded', function() {
+    const navLinks = document.querySelectorAll('.nav a');
+    
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            
+            // Jika target adalah home
+            if (targetId === '#home-page') {
+                smoothScrollTo(0, 800);
+                return;
+            }
+            
+            // Jika target adalah section lain
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                // Hitung posisi dengan offset untuk header
+                const header = document.querySelector('.header');
+                const headerHeight = header ? header.offsetHeight : 80;
+                const targetPosition = targetElement.offsetTop - headerHeight;
+                
+                smoothScrollTo(targetPosition, 800);
+            }
+        });
+    });
+    
+    // Fungsi smooth scroll custom dengan easing
+    function smoothScrollTo(targetPosition, duration) {
+        const startPosition = window.pageYOffset;
+        const distance = targetPosition - startPosition;
+        let startTime = null;
+        
+        function animation(currentTime) {
+            if (startTime === null) startTime = currentTime;
+            const timeElapsed = currentTime - startTime;
+            const progress = Math.min(timeElapsed / duration, 1);
+            
+            // Easing function (easeInOutCubic)
+            const ease = progress < 0.5 
+                ? 4 * progress * progress * progress 
+                : 1 - Math.pow(-2 * progress + 2, 3) / 2;
+            
+            window.scrollTo(0, startPosition + (distance * ease));
+            
+            if (timeElapsed < duration) {
+                requestAnimationFrame(animation);
+            }
+        }
+        
+        requestAnimationFrame(animation);
+    }
+});
