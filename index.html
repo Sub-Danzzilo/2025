@@ -7,12 +7,10 @@
     <link rel="stylesheet" href="assets\css\styles.css">
 </head>
 <body>
-    <!-- BACKGROUND -->
-    <div class="stars-bg" id="stars"></div>
     
     <!-- HEADER -->
     <header class="header">
-        <div class="logo-text" onclick="window.location.reload()">Danzzilo</div>
+        <img src="assets\images\logo.jpg" alt="logo" onclick="window.location.reload()"></img>
         <nav class="nav">
             <a href="#home-page">Home</a>
             <a href="#about-page">About</a>
@@ -26,8 +24,8 @@
         
         <!-- HOME -->
         <section id="home-page">
-            <div class="logo-container">
-                <div class="logo-image">
+            <div class="main-logo-container">
+                <div class="main-logo-image">
                     <a href="https://linktr.ee/Danzzilo" target="_blank" rel="noopener noreferrer">
                         <img src="assets\images\logo.jpg" alt="logo">
                     </a>
@@ -35,66 +33,117 @@
             </div>
         </section>
         
-        <hr>
+        <hr class="section-separator">
 
         <!-- ABOUT -->
         <section id="about-page">
-            <div class="main-header">
-                <h1 class="main-header-text">About me</h1>
-            </div>
-            <div class="main-description">
+            <h1 class="main-header-text">About me</h1>
+            <article class="main-description">
                 <p class="indent-paragraph">
-                    Hi! i'm Muhammad Riski. You can call me Riski. 
+                    Hi! i'm Muhammad Riski.
+                    You can call me Riski.
+                    I love simple design and minimalist UI/UX. 
                     Currently, I'm a student at <a href="https://unesa.ac.id/"
                                                 target="_blank"
                                                 rel="noopener noreferrer">
                                                 <strong>Universitas Negeri Surabaya</strong></a> 
-                    majoring in Informatics Management. 
+                    majoring in <a href="https://terapan-ti.vokasi.unesa.ac.id/"
+                                target="_blank"
+                                rel="noopener noreferrer">
+                                <strong>Informatics Management</strong></a>. 
                     I'm beginner in web development. 
                     I'm currently learning HTML, CSS, JavaScript, Python, basic C++, and basic PHP.
                 </p>
-            </div>
+            </article>
         </section>
 
-        <hr>
+        <hr class="section-separator">
 
         <!-- PROJECTS -->
         <section id="projects-page">
-            <div class="main-header">
-                <h1 class="main-header-text">Projects</h1>
-            </div>
+            <h1 class="main-header-text">Projects</h1>
             <div class="card-projects">
-                <div class="card">
+                <article class="card">
                     <img src="assets\images\spacedef.png" alt="Space Defender">
                     <a href="https://github.com/Sub-Danzzilo/Space-Defender"
-                    target="_blank"
-                    rel="noopener noreferrer">
-                    <h2>Space Defender</h2></a>
-                    <p>
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        <h2>Space Defender</h2>
+                    </a>
+                    <p class="indent-paragraph">
                         Space Defender is a space shooting game that only requires WASD or Arrow keys to move, without the need for manual shooting. 
                         It has a power-up system to make it easier and leveling. The higher the level, the more challenging the opponents. 
                         This game was created for a final semester project in the Algorithms Programming course. 
                         It was developed using pure Python with the PyGame library and Pyinstaller to build the game into an executable file. 
                         The game can be played remotely in multiplayer mode using ZeroTier.
                     </p>
-                </div>
-                <div class="card">
+                </article>
+                <article class="card">
+                    <img src="" alt="">
                     <h2>Project 2</h2>
                     <p>Project 2 description</p>
-                </div>
-                <div class="card">
-                    <h2>Project 3</h2>
-                    <p>Project 3 description</p>
-                </div>
+                </article>
             </div>
         </section>
 
-        <hr>
+        <hr class="section-separator">
 
         <!-- CONTACT -->
         <section id="contact-page">
-            <div class="main-header">
-                <h1 class="main-header-text">Contact</h1>
+            <h1 class="main-header-text">Contact</h1>
+            <div class="card-contacts">
+                <div class="card-contacts-email">
+                    <h2>Contact me</h2>
+                    <form action="/send-email" method="POST">
+                        <input
+                        type="email"
+                        name="email"
+                        placeholder="Your Email..."
+                        required>
+                        <textarea
+                        name="message"
+                        placeholder="Message..."></textarea>
+                        <button type="submit">Send</button>
+                    </form>
+                </div>
+                <div class="card-contacts-social-media">
+                    <a href="https://linktr.ee/Danzzilo"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="social-media">
+                        <img src="assets\images\icons\linktree.svg" alt="linktree" class="icon-contact">
+                    </a>
+                    <a href="https://github.com/Sub-Danzzilo"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="social-media">
+                        <img src="assets\images\icons\github.svg" alt="github" class="icon-contact">
+                    </a>
+                    <a href="https://www.linkedin.com/in/muhammad-riski-992a7a3a0/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="social-media">
+                        <img src="assets\images\icons\linkedin.svg" alt="linkedin" class="icon-contact">
+                    </a>
+                    <a href="https://www.instagram.com/sshrskdzl_/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="social-media">
+                        <img src="assets\images\icons\instagram.svg" alt="instagram" class="icon-contact">
+                    </a>
+                    <a href="https://discord.com/users/827172619694505995"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="social-media">
+                        <img src="assets\images\icons\discord.svg" alt="discord" class="icon-contact">
+                    </a>
+                    <a href="https://x.com/Danzzilowo"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="social-media">
+                        <img src="assets\images\icons\x-twitter.svg" alt="x" class="icon-contact">
+                    </a>
+                </div>
             </div>
         </section>
     </main>
@@ -102,7 +151,26 @@
     <!-- FOOTER -->
     <footer class="footer">
         <p>&copy; 2025 Muhammad Riski. All rights reserved.</p>
+        <div class="footer-social-media">
+            <a href="https://linktr.ee/Danzzilo"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-media">
+                <img src="assets\images\icons\linktree.svg" alt="linktree" class="icon-footer">
+            </a>
+            <a href="https://github.com/Sub-Danzzilo"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-media">
+                <img src="assets\images\icons\github.svg" alt="github" class="icon-footer">
+            </a>
+            <a href="https://www.linkedin.com/in/muhammad-riski-992a7a3a0/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-media">
+                <img src="assets\images\icons\linkedin.svg" alt="linkedin" class="icon-footer">
+            </a>
+        </div>
     </footer>
-    <script src="assets\js\script.js"></script>
 </body>
 </html>
