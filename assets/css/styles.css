@@ -227,7 +227,7 @@ html{
     justify-content: center;
     align-items: stretch;
     gap: 1em;
-    padding: 1em 1em;
+    padding: 2em 1em;
     background-color: var(--primary);
     color: var(--text);
     border-radius: 10px;
@@ -256,7 +256,7 @@ html{
     justify-content: flex-start;
     align-items: center;
     gap: 1em;
-    padding: 2em 1em;
+    padding: 2em 2em;
     background-color: var(--secondary);
     color: var(--text);
     border-radius: 10px;
@@ -286,7 +286,7 @@ html{
 .card a{
     color: var(--text);
     transition: color 0.4s ease-in-out;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 .card a:hover{
